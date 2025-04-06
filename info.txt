@@ -1,0 +1,9 @@
+1. Text Encoding
+2. 3D Model Generation (Neural Implict Functions (DeepSDF/NeRF))
+3. Convert to mesh with Marching Cubes
+4. GNN/MeshCNN for vertex prediction of position
+5. 3D CNN with voxel grid output
+6. ShapeNet as Dataset
+7. Open3D/Trimesh to clean up noisy mesh
+8. Implement discrete ricci flow
+9. Export as GLB/STL/OBJ, render using Blender's Python API

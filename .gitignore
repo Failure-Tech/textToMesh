@@ -1,0 +1,7 @@
+.aider*
+.env
+# *.off
+# *.npy
+# data/*.off
+# data/*.npy
+data/*
