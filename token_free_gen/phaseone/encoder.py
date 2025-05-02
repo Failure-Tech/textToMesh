@@ -10,7 +10,7 @@ class CNN(nn.Module):
             nn.ReLU(), # non linearity introduction
             nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1), # 128 x H/4 x W/4
             nn.ReLU(),
-            nn.Conv2D(128, token_dim, kernel_size=4, stride=2, padding=1), # 256 x H/8 x W/8
+            nn.Conv2d(128, token_dim, kernel_size=4, stride=2, padding=1), # 256 x H/8 x W/8
             nn.ReLU()
         )
 
@@ -19,7 +19,7 @@ class CNN(nn.Module):
     
 class ViewPointEmbedding(nn.Module):
     def __init__(self, num_views=16, token_dim=256):
-        super.__init__()
+        super().__init__()
         self.view_embed = nn.Embedding(num_views, token_dim) # tokenizing image
 
     def forward(self, view_id):
