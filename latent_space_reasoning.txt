@@ -1,0 +1,52 @@
+Token-Free 3D Generation with Coconut-Style Reasoning
+Modify 3DiM's pipeline to use continuous latent coordinates instead of fixed camera matrices. 
+Implement differentiable ray marching through latent space coordinates using positional encoding.
+
+Training Protocol
+
+Phase 1: Train with full viewpoint tokens
+
+Phase 2: Replace 50% of tokens with learned latent embeddings
+
+Phase 3: Complete token elimination (use [BOCT]/[EOCT] markers from Coconut)
+
+Traning Objectives:
+- Holographic reconstruction (Fresnel transformation)
+- Latent space regularization
+- Compression rate
+
+Recommended Pipeline:
+
+Start with 2D view synthesis using modified Coconut reasoning
+
+Gradually extend to 3D via differentiable volume rendering
+
+Add compression components incrementally
+
+Final joint training with all losses
+
+1. Baseline 2D View Synthesis
+    - impl encoder for input image tokens
+    - add transformer decoder to condition on viewpoint tokens
+    - reproduce standard 3DiM-like view synthesis
+
+2. Latent View Embedding Module
+    - replace fixed camera/viewpoint tokens with learned latent coords
+    - apply positional encoding to viewpoint coords
+    - small MLP
+
+3. BOCT/EOCT Framing (Coconut-Style)
+    - Special markers: [IMG_Tokens] + [BOCT] + z_view + [EOCT]
+    - Eliminate view tokens
+
+4. Differentiable Volume Rendering
+    - NeRF-Style Ray marching
+    - Fresnel propagatino for Holographic rendering
+    - FFT --> Phase Mask --> iFFT
+
+5. Compression + Autoencoding
+    - Image token compressor
+    - Replace high-dim image features w/ compressed ones
+
+6. Join Training
+    - Combine all components
