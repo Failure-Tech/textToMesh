@@ -50,3 +50,18 @@ Final joint training with all losses
 
 6. Join Training
     - Combine all components
+
+
+1. Hybrid3D Approach implementation
+2. Convert from point cloud to voxel grids
+3. Use 3 ray tracers at precise voxel locations
+4. Optimize further with Ricci Flow if necessary
+5. If we want, convert current voxel grids back to mesh via MarchingCubes
+6. Use coconut (chain of continous thought) reasoning for multimodal model implementation and using techniques found in those research papers
+7. Animations
+8. Optional: Include token-free implementation
+9. Preprint Research Paper
+10. Apply to IEEE (gotta find specific journal in IEEE)
+11. Pray and Win
+
+hybrid3D approach --> convert from point cloud system to voxel locations --> 3 raytracers for precise voxel locations --> optimization via Ricci flow if we feel like it --> output --> chain of continuous thought model implementation (coconut style bs) --> animations (figure out how to do this, maybe stringing together model movements? needs more research)
