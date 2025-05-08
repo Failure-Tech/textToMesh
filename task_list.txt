@@ -9,3 +9,5 @@
 9. Preprint Research Paper
 10. Apply to IEEE (gotta find specific journal in IEEE)
 11. Pray and Win
+
+./venv/scripts/activate
